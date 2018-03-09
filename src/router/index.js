@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Login from '@/components/Login'
+import ElementUI from '@/components/ElementUI'
 
 Vue.use(Router)
 
@@ -14,8 +15,14 @@ export default new Router({
       }
     },
     {
+      path: '/elementui',
+      name: 'ElementUI Test',
+      component: ElementUI
+    },
+
+    {
       path: '/login',
-      name: 'Login',
+      name: 'AT-UI Login',
       component: Login
     }
   ]
