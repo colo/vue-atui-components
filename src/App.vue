@@ -1,28 +1,19 @@
 <template>
-  <div class="container" id="app">
-    <div class="row" style="margin-bottom: 24px;">
-      <at-menu router v-for="route in routes" theme="dark" mode="inline">
-        <at-menu-item :to="{ name: route.name }">{{route.name}}</at-menu-item>
-      </at-menu>
-    </div>
-
-    <!-- <div class="row at-row flex-center flex-middle"> -->
-
-
-      <!-- <div class="col-md-3"> -->
-
-
-           <!-- <at-button @click="handleClick">Thanks for choosing AT-UI </at-button> -->
-
-
-
-          <router-view></router-view>
-      
-
-
+  <div class="container-fluid" id="app">
+    <div class="row at-row">
+      <div class="col-md-8 no-gutter">
+        <at-menu router v-for="(route, index) in routes" :key="index" mode="vertical">
+          <at-menu-item :to="{ name: route.name }">{{route.name}}</at-menu-item>
+        </at-menu>
+      </div>
+      <div class="col-md-8 col-md-offset-4">
+        <router-view></router-view>
+      </div>
+      <!-- <div class="col-md-8"><div class="at-box-row bg-c-brand-dark"></div></div> -->
 
     </div>
-  <!-- </div> -->
+
+  </div>
 </template>
 
 

@@ -1,5 +1,5 @@
 <template>
-  <!-- <div class="at-box-row bg-c-brand-light"> -->
+
     <at-card :loading="loading" :style="{ width: '300px' }" :bordered="false">
       <h4 slot="title">Login</h4>
       <!-- <div slot="extra"><a>Register</a></div> -->
@@ -26,7 +26,6 @@
       </div>
     </at-card>
 
-  <!-- </div> -->
 </template>
 
 <script>
