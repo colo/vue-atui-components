@@ -1,19 +1,34 @@
 <template>
-  <div class="container-fluid" id="app">
-    <div class="row at-row">
-      <div class="col-md-8 no-gutter">
+<div class="wrapper">
+  <div class="at-container row" id="app">
+    <div class="at-sidebar col-md-8">
+      <!-- <div class="container"> -->
+
         <at-menu router v-for="(route, index) in routes" :key="index" mode="vertical">
           <at-menu-item :to="{ name: route.name }">{{route.name}}</at-menu-item>
         </at-menu>
-      </div>
-      <div class="col-md-8 col-md-offset-4">
-        <router-view></router-view>
-      </div>
-      <!-- <div class="col-md-8"><div class="at-box-row bg-c-brand-dark"></div></div> -->
+
+    </div>
+    <div class="at-markdown col-md-8 col-md-offset-4">
+
+      <router-view></router-view>
+
 
     </div>
 
+    <div class="at-sidebar">
+        algo al final
+    </div>
+
+
   </div>
+  <div class="footer">
+    <div class="container">
+      footer
+    </div>
+  </div>
+
+</div>
 </template>
 
 
